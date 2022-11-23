@@ -1,0 +1,88 @@
+//fuente mona sans
+@font-face {
+    font-family: "mona";
+    src: url('fonts/Mona-Sans.ttf');
+}
+
+//variables
+$turquesa: hsl(185, 75%, 39%);
+$mona-sans: mona;
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+    
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-family:$mona-sans;
+    background-color:$turquesa;
+    background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+h1{
+    text-align: center;
+    padding: 2rem;
+    font-size: 6rem;
+    color:#282828;
+}
+
+#cocktaillist{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+
+.card {
+    background-color: white;
+    width: 326px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+
+    
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.383);
+
+        &-img {
+            width: 200px;
+            height: 200px;
+            // display: block;
+            // width: 100%;
+            border: 5px solid white;
+            border-radius: 50%;
+            margin-top: calc(-48px - 5px);
+            background-color: white;
+            // filter: invert(100%);
+            // object-fit: cover;
+        }
+
+        &-title {
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            margin-bottom: 6rem;
+        }
+
+    }
+
+}
