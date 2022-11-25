@@ -49,22 +49,19 @@ const pintarCocktail = (cocktail,ingrediente) => {
     const cardCocktail = document.createElement('article');
     cardCocktail.classList.add('card');
 
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
 
-    const cardTitle = document.createElement('h1');
-    cardTitle.classList.add('card-body-title');
+    const cardTitle = document.createElement('h2');
+    cardTitle.classList.add('card-title');
     cardTitle.textContent = cocktail.nombre
 
 
     const cardImg = document.createElement('img');
-    cardImg.classList.add('card-body-img');
+    cardImg.classList.add('card-img');
     cardImg.src= cocktail.img
 
     document.querySelector('span').textContent = ingrediente
     lista.appendChild(cardCocktail)
-    cardCocktail.appendChild(cardBody)
-    cardBody.appendChild(cardTitle)
-    cardBody.appendChild(cardImg)
+    cardCocktail.appendChild(cardTitle)
+    cardCocktail.appendChild(cardImg)
   
 }
